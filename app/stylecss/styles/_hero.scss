@@ -39,15 +39,13 @@
     width: 100%;
     height: 360px;
     background-image: url(../../../images/mobile-image-hero-1.jpg);
-
     text-align: center;
-
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 
     .menu__mobile {
-      margin-left: 25px;
+      margin-left: 30px;
       margin-top: 48px;
       width: 20px;
       height: 15px;
@@ -83,7 +81,6 @@
       right: 0;
       width: 113px;
       height: 56px;
-
       background-color: $black;
 
       img {
@@ -102,10 +99,41 @@
     width: 100%;
     height: 100vh;
     background-color: $black;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     visibility: hidden;
     opacity: 0;
     transition: opacity 400ms ease-in-out;
+  }
+
+  .hero__copy {
+    width: 100%;
+    height: 400px;
+    padding: 72px 30px 65px 30px;
+
+    .copy__tittle {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .copy__text {
+      font-size: 12px;
+      color: $darkGray;
+      line-height: 1.7;
+      margin-bottom: 55px;
+    }
+
+    .hero__cta {
+      display: flex;
+
+      p {
+        font-size: 12px;
+        font-weight: 700;
+        color: $black;
+        letter-spacing: 11px;
+        text-transform: uppercase;
+        margin-right: 44px;
+      }
+    }
   }
 }
