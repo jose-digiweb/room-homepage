@@ -61,17 +61,17 @@ a {
     position: relative;
     width: 100%;
     height: 360px;
-    background-image: url(../../../images/mobile-image-hero-1.jpg);
-    text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+  }
+  .hero__background .carousel {
+    display: flex;
+    overflow-x: hidden;
   }
   .hero__background .menu__mobile {
     margin-left: 30px;
     margin-top: 48px;
     width: 20px;
     height: 15px;
+    position: absolute;
   }
   .hero__background .menu__mobile span {
     display: block;
@@ -94,7 +94,7 @@ a {
   .hero__background .arrows__nav {
     position: absolute;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     bottom: 0;
     right: 0;
@@ -102,13 +102,16 @@ a {
     height: 56px;
     background-color: black;
   }
+  .hero__background .arrows__nav .carousel-control-prev {
+    margin-left: 20px;
+  }
+  .hero__background .arrows__nav .carousel-control-next {
+    margin-right: 20px;
+  }
   .hero__background .arrows__nav img {
     width: 11px;
     height: 19px;
     opacity: 0.6;
-  }
-  .hero__background .arrows__nav img:first-child {
-    margin-right: 46px;
   }
   .overlay__menu {
     width: 100%;
@@ -144,6 +147,10 @@ a {
     letter-spacing: 11px;
     text-transform: uppercase;
     margin-right: 44px;
+  }
+  .hero__copy .hero__cta img {
+    width: 41px;
+    height: 13px;
   }
   .about__container {
     width: 100%;
