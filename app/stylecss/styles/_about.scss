@@ -1,33 +1,66 @@
-@media (max-width: 426px) {
-  .about__container {
+@import './mixin';
+
+.about__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoints-up(large) {
+    flex-direction: row;
+  }
+
+  @include breakpoints-up(xlarge) {
+  }
+
+  .about__image {
     width: 100%;
-    display: flex;
-    flex-direction: column;
 
-    .about__image {
-      width: 100%;
+    @include breakpoints-up(large) {
     }
 
-    .about__text {
-      width: 100%;
+    @include breakpoints-up(xlarge) {
+      flex: 1;
+    }
+  }
 
-      h2 {
-        font-size: 0.76rem;
-        font-weight: 700;
-        letter-spacing: 5px;
-        text-transform: uppercase;
-        color: $black;
-        margin-bottom: 1em;
-      }
+  .about__text {
+    width: 100%;
 
-      p {
-        color: $darkGray;
-        line-height: 1.7;
+    @include breakpoints-up(large) {
+      padding: 2em;
+    }
+
+    @include breakpoints-up(xlarge) {
+      flex: 2;
+    }
+
+    h2 {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: $black;
+      margin-bottom: 1em;
+
+      @include breakpoints-up(medium) {
+        font-size: 1rem;
       }
     }
 
-    .footer__image {
-      width: 100%;
+    p {
+      color: $darkGray;
+      line-height: 1.7;
+    }
+  }
+
+  .footer__image {
+    width: 100%;
+
+    @include breakpoints-up(large) {
+    }
+
+    @include breakpoints-up(xlarge) {
+      flex: 1;
     }
   }
 }
