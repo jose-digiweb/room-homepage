@@ -16,6 +16,10 @@
   display: flex;
   position: relative;
 
+  @include breakpoints-up(large) {
+    width: 60%;
+  }
+
   @include breakpoints-up(xlarge) {
     width: 60%;
   }
@@ -28,9 +32,8 @@
       img {
         object-fit: cover;
         height: 100%;
-        @include breakpoints-up(large) {
-          object-fit: cover;
-          object-position: center bottom;
+        object-position: center center;
+        @include breakpoints-up(xlarge) {
         }
       }
     }
@@ -46,6 +49,12 @@
     width: 113px;
     height: 56px;
     background-color: $black;
+
+    @include breakpoints-up(xlarge) {
+      transform: translateX(144px);
+      width: 144px;
+      height: 70px;
+    }
 
     .carousel-control-prev {
       margin-left: 1.6em;
@@ -67,32 +76,46 @@
   @include breakpoints-down(small) {
     width: 100%;
     height: 100vh;
-    background-color: $black;
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     z-index: 1;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 400ms ease-in-out;
+    transition: 400ms ease-in-out;
   }
 }
 
 .hero__copy {
   width: 100%;
 
+  @include breakpoints-up(large) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+  }
+
   @include breakpoints-up(xlarge) {
     width: 40%;
+    padding: 6em 7em;
   }
 
   .copy__tittle {
     font-size: 1.5625rem;
     margin-bottom: 0.8em;
     font-weight: 700;
+
+    @include breakpoints-up(xlarge) {
+      font-size: 2rem;
+    }
   }
 
   .copy__text {
     color: $darkGray;
     line-height: 1.7;
     margin-bottom: 4.58em;
+
+    @include breakpoints-up(xlarge) {
+      margin-bottom: 2.5em;
+    }
   }
 
   .hero__cta {
@@ -104,6 +127,13 @@
       letter-spacing: 11px;
       text-transform: uppercase;
       margin-right: 3.67em;
+      transition: color 100ms ease-in-out;
+
+      @include breakpoints-up(medium) {
+        &:hover {
+          color: $darkGray;
+        }
+      }
     }
 
     img {

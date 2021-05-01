@@ -14,6 +14,10 @@
     padding: 0 2.5em;
   }
 
+  @include breakpoints-up(large) {
+    padding: 0 4em;
+  }
+
   .menu__mobile {
     width: 22px;
     height: 13px;
@@ -95,6 +99,11 @@
         font-weight: 400;
         letter-spacing: 0.8px;
         color: $white;
+        transition: color 100ms ease-in-out;
+
+        &:hover {
+          color: lightgrey;
+        }
       }
     }
   }

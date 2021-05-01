@@ -5,18 +5,18 @@
   display: flex;
   flex-direction: column;
 
-  @include breakpoints-down(medium) {
-    // padding: 0 4em;
-  }
-
-  @include breakpoints-down(small) {
-    padding: 0;
+  @include breakpoints-up(large) {
+    height: 40%;
   }
 
   @include breakpoints-up(large) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    // overflow: hidden;
+  }
+
+  @include breakpoints-up(xlarge) {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
   }
 
   @include breakpoints-up(xlarge) {
@@ -28,9 +28,6 @@
 
     @include breakpoints-up(large) {
       display: none;
-      padding: 0;
-
-      order: 1;
     }
 
     @include breakpoints-up(medium) {
@@ -39,11 +36,15 @@
 
     @include breakpoints-up(xlarge) {
       display: block;
-      order: 0;
+      padding: 0;
     }
 
     img {
       object-fit: cover;
+
+      @include breakpoints-up(xlarge) {
+        height: 100%;
+      }
     }
   }
 
@@ -54,31 +55,11 @@
     flex-direction: column;
     justify-content: center;
 
-    // @include breakpoints-up(medium) {
-    //   padding: 6em 3em;
-    // }
-
-    // @include breakpoints-down(small) {
-    //   padding: 6em 2.5em;
-    // }
-
     @include breakpoints-up(large) {
-      // padding: 6em 4em;
       display: flex;
       flex-direction: column;
-      // align-items: center;
       justify-content: center;
-      // padding: 1em 4rem;
-
-      // order: 3;
-      // &:nth-of-type(2) {
-      //   order: 3;
-      // }
     }
-
-    // @include breakpoints-up(xlarge) {
-    //
-    // }
 
     h2 {
       font-size: 0.76rem;
@@ -106,16 +87,10 @@
       padding: 0;
     }
 
-    @include breakpoints-up(xlarge) {
-    }
-
     img {
       object-fit: cover;
       width: 100%;
       height: 100%;
-
-      @include breakpoints-up(large) {
-      }
     }
   }
 }
