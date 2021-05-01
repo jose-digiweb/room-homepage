@@ -7,19 +7,25 @@ const body = document.querySelector('body');
 const handlingOpen = (e) => {
   e.preventDefault();
 
-  navMenu.style.transform = 'translateY(0)';
-  menuOverlay.style.visibility = 'visible';
-  menuOverlay.style.opacity = '0.6';
-  body.style.overflow = 'hidden';
+  if (window.innerWidth < 620) {
+    menuOverlay.classList.add('overlay');
+    menuOverlay.style.opacity = '0.6';
+    menuOverlay.style.visibility = 'visible';
+    navMenu.style.transform = 'translateY(0)';
+    body.style.overflow = 'hidden';
+  }
 };
 
 const handlingClose = (e) => {
   e.preventDefault();
 
-  navMenu.style.transform = 'translateY(-113px)';
-  menuOverlay.style.opacity = '0';
-  menuOverlay.style.visibility = 'hidden';
-  body.style.overflow = 'scroll';
+  if (window.innerWidth < 620) {
+    menuOverlay.classList.remove('overlay');
+    menuOverlay.style.opacity = '0';
+    menuOverlay.style.visibility = 'hidden';
+    navMenu.style.transform = 'translateY(-113px)';
+    body.style.overflow = 'scroll';
+  }
 };
 
 mobileOpen.addEventListener('click', handlingOpen);
