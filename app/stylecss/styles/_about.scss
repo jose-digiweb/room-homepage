@@ -7,20 +7,16 @@
 
   @include breakpoints-up(large) {
     height: 40%;
-  }
-
-  @include breakpoints-up(large) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    overflow-y: hidden;
   }
 
   @include breakpoints-up(xlarge) {
     display: grid;
     grid-template-columns: 30% 40% 30%;
-  }
-
-  @include breakpoints-up(xlarge) {
     height: 35%;
+    overflow-y: hidden;
   }
 
   .about__image {
