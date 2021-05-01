@@ -26,11 +26,6 @@ body {
   line-height: 1.3;
 }
 
-.main {
-  width: 100%;
-  height: 100vh;
-}
-
 img {
   width: 100%;
 }
@@ -42,6 +37,11 @@ a {
 button {
   border: none;
   background-color: transparent;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
 }
 
 .paddings {
@@ -64,11 +64,3 @@ button {
     padding: 6em 4em;
   }
 }
-
-// .container {
-//   padding: 5em 2.5em;
-
-//   // @include breakpoints-up(medium) {
-//   //   padding: 7em 4em;
-//   // }
-// }
