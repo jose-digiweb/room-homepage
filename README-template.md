@@ -40,66 +40,63 @@ Users should be able to:
 
 ## My process
 
+Usually, I start by analyzing the design files and I define how I will structure the HTML and the best CSS properties I can use to make it happen. 
+
+After having everything structured in my head, sometimes I write in a google doc (when is a big project), then I jump to my code editor (VS code).
+
+I always start by creating a repository in Github using the terminal, after that, I run the "npm init" to create a "package.json", then I install all the dependencies I will need, and when is all set, I create the HTML file, and inside of the "app folder" I create the Sass folder and the JavaScript folder with their containing files inside.  
+
+Having these all set, then I start writing the HTML structure for the all page, after I finish with the HTLM I link the CSS and JavaScript files and start styling the page right away. Usually, I use "Scss Sass extension" in all my projects, it makes things way easier to structure/organize and the workflow is much more fluid as well.
+
+My workflow is always starting from the header, making it totally responsive, then I jump to the Hero Section, and so on. 
+
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Semantic HTML5 markup,
+- Sass (Scss) custom properties,
+- Flexbox,
+- Vanilla JavaScript
+- Mobile-first workflow,
+- [Bootstrap](https://getbootstrap.com/) - HTML, CSS & JS library
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+It was a very good way to pratice a lot of things that I already knew, but I dont use often, such as: 
+- Implementing a slide show in especific area of a section (using bootstrap),
+- Sass variables ans Mixins,    
+- Changing images source depending on the window size (device size) using vanilla JavaScript, 
+- Window event listener,
+- DOM Manipulation.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+<div class="carousel-item active">
+   <img
+     src="./images/mobile-image-hero-1.jpg"
+     class="d-block w-100"
+     alt="chair"
+    />
+</div>
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1220) {
+    carouselImages[0].src = './images/desktop-image-hero-1.jpg';
+    carouselImages[1].src = './images/desktop-image-hero-2.jpg';
+    carouselImages[2].src = './images/desktop-image-hero-3.jpg';
+  } else if (window.innerWidth < 1220) {
+    carouselImages[0].src = './images/mobile-image-hero-1.jpg';
+    carouselImages[1].src = './images/mobile-image-hero-2.jpg';
+    carouselImages[2].src = './images/mobile-image-hero-3.jpg';
+  }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Stack Overflow](https://stackoverflow.com/) - Stack Overflow is always a great help on finding help.
+- [W3School](https://www.w3schools.com/) - W3School is one of the most websites I use to find help as well.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Github](https://github.com/jose-digiweb)
+- Frontend Mentor - [@JoseDigiweb](https://www.frontendmentor.io/profile/JoseDigiweb)
+- Instagram - [@JoseDigiWeb](https://www.instagram.com/jose.digiweb/)
