@@ -31,6 +31,8 @@ Users should be able to:
 
 [./images/desktop-screenshot.jpg](./images/desktop-screenshot.jpg)
 
+[./images/mobile-screenshot.jpg](./images/mobile-screenshot.jpg)
+
 
 Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
 
