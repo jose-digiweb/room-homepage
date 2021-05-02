@@ -182,14 +182,27 @@ button {
 
 @media (min-width: 38.75em) {
   .header .nav__menu a {
-    font-size: 0.8rem;
-    font-weight: 400;
-    letter-spacing: 0.8px;
+    position: relative;
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 0.3px;
     color: white;
-    transition: color 100ms ease-in-out;
+    padding-bottom: 8px;
   }
-  .header .nav__menu a:hover {
-    color: lightgrey;
+  .header .nav__menu a::before {
+    content: '';
+    background-color: white;
+    width: 1px;
+    height: 1.4px;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 200ms ease-in-out;
+  }
+  .header .nav__menu a:hover:before {
+    opacity: 1;
+    width: 25px;
   }
 }
 
@@ -236,36 +249,41 @@ button {
 
 .hero__background .arrows__nav {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   bottom: 0;
   right: 0;
-  width: 113px;
-  height: 56px;
-  background-color: black;
+  width: 100px;
+  height: 60px;
 }
 
-@media (min-width: 90em) {
+@media (min-width: 64em) {
   .hero__background .arrows__nav {
-    transform: translateX(144px);
     width: 144px;
     height: 70px;
   }
 }
 
-.hero__background .arrows__nav .carousel-control-prev {
-  margin-left: 1.6em;
+@media (min-width: 90em) {
+  .hero__background .arrows__nav {
+    transform: translateX(144px);
+  }
 }
 
-.hero__background .arrows__nav .carousel-control-next {
-  margin-right: 1.6em;
+.hero__background .arrows__nav button {
+  background-color: black;
+  opacity: 1;
+  width: 50%;
+  transition: 200ms ease-in-out;
 }
 
-.hero__background .arrows__nav img {
-  width: 11px;
-  height: 19px;
-  opacity: 0.6;
+.hero__background .arrows__nav button span {
+  opacity: 0.7;
+  width: 25px;
+}
+
+@media (min-width: 64em) {
+  .hero__background .arrows__nav button:hover {
+    opacity: 0.7;
+  }
 }
 
 @media (max-width: 39.9375em) {
@@ -326,6 +344,13 @@ button {
 
 .hero__copy .hero__cta {
   display: flex;
+  transition: opacity 100ms ease-in-out;
+}
+
+@media (min-width: 38.75em) {
+  .hero__copy .hero__cta:hover {
+    opacity: 0.4;
+  }
 }
 
 .hero__copy .hero__cta p {
@@ -334,13 +359,6 @@ button {
   letter-spacing: 11px;
   text-transform: uppercase;
   margin-right: 3.67em;
-  transition: color 100ms ease-in-out;
-}
-
-@media (min-width: 38.75em) {
-  .hero__copy .hero__cta p:hover {
-    color: #a1a1a1;
-  }
 }
 
 .hero__copy .hero__cta img {

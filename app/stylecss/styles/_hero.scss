@@ -36,33 +36,36 @@
 
   .arrows__nav {
     position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     bottom: 0;
     right: 0;
-    width: 113px;
-    height: 56px;
-    background-color: $black;
+    width: 100px;
+    height: 60px;
 
-    @include breakpoints-up(xlarge) {
-      transform: translateX(144px);
+    @include breakpoints-up(large) {
       width: 144px;
       height: 70px;
     }
 
-    .carousel-control-prev {
-      margin-left: 1.6em;
+    @include breakpoints-up(xlarge) {
+      transform: translateX(144px);
     }
 
-    .carousel-control-next {
-      margin-right: 1.6em;
-    }
+    button {
+      background-color: $black;
+      opacity: 1;
+      width: 50%;
+      transition: 200ms ease-in-out;
 
-    img {
-      width: 11px;
-      height: 19px;
-      opacity: 0.6;
+      span {
+        opacity: 0.7;
+        width: 25px;
+      }
+
+      @include breakpoints-up(large) {
+        &:hover {
+          opacity: 0.7;
+        }
+      }
     }
   }
 }
@@ -116,6 +119,13 @@
 
   .hero__cta {
     display: flex;
+    transition: opacity 100ms ease-in-out;
+
+    @include breakpoints-up(medium) {
+      &:hover {
+        opacity: 0.4;
+      }
+    }
 
     p {
       font-weight: 700;
@@ -123,13 +133,6 @@
       letter-spacing: 11px;
       text-transform: uppercase;
       margin-right: 3.67em;
-      transition: color 100ms ease-in-out;
-
-      @include breakpoints-up(medium) {
-        &:hover {
-          color: $darkGray;
-        }
-      }
     }
 
     img {
