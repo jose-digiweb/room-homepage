@@ -11,10 +11,8 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 This was a challenge provided on the Frontend Mentor website, this project consists of building a home page for e-commerce that will be fully responsive, with a slide show that the user can switch pictures using their mouse or keyboard.
